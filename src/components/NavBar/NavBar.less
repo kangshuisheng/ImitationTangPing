@@ -1,0 +1,36 @@
+.nav-bar-container {
+  margin: auto 10px 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  .active-nav-bar-item{
+    color: #333;
+    font-weight: 900;
+    transition: all .2s;
+    transform: translateY(-4px) scale(1.1);
+    
+  }
+  .active-nav-bar-item,
+  .nav-bar-item {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;    
+    span {
+      font-size: 14px;
+    }
+    .iconfont {
+      font-size: 28px;
+    }
+  }
+}

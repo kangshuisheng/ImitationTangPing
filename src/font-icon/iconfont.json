@@ -1,0 +1,107 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "695714",
+      "name": "收藏",
+      "font_class": "keep",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "700832",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "1488894",
+      "name": "唱片",
+      "font_class": "changpian",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "2380638",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "3216143",
+      "name": "消息",
+      "font_class": "icon--",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "4954951",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "5532898",
+      "name": "圈子",
+      "font_class": "quanzi",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "5771110",
+      "name": "我的",
+      "font_class": "My",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "6010897",
+      "name": "新建",
+      "font_class": "xinjian",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "6265007",
+      "name": "扫描",
+      "font_class": "scan-line",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "7524619",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e770",
+      "unicode_decimal": 59248
+    },
+    {
+      "icon_id": "8922340",
+      "name": "家",
+      "font_class": "jia",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "10707071",
+      "name": "喜欢 like",
+      "font_class": "xihuan",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "11683673",
+      "name": "评论",
+      "font_class": "ziyuan",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}
