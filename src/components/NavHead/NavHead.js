@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import "./index.less";
 export default class index extends Component {
-  constructor() {
-    super();
-    this.state = {
-      
-    };
-  }
   render() {
+    console.log("NavHead组件",this.props)
     return (
       <div className="nav-head-wrap">
         <div className="left-logo">
-          <img src="https://dss2.bdstatic.com/6Ot1bjeh1BF3odCf/it/u=3177717926,2057855627&fm=74&app=80&f=JPG&size=f121,121?sec=1880279984&t=141c800d3653b239f695b813f2c3c22b" alt=""/>
+          <img src={this.props.img_src} alt=""/>
         </div>
         <div className="search-frame">
           <input type="text" placeholder="搜索内容或者圈子" />

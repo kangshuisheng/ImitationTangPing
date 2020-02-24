@@ -51,6 +51,14 @@ const Circle = Loadable({
   loader: () => import("./Circle"),
   loading: Loading
 });
+const RecomMent = Loadable({
+  loader: () => import("./RecomMent"),
+  loading: Loading
+});
+const Follow = Loadable({
+  loader: () => import("./Follow"),
+  loading: Loading
+});
 
 export {
   ArticalList,
@@ -63,5 +71,7 @@ export {
   Message,
   MyHome,
   Add,
-  Circle
+  Circle,
+  Follow,
+  RecomMent
 };

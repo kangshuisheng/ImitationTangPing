@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { landingRouter } from "../src/router/";
+import NavBar from "./components/NavBar/NavBar"
 export default class App extends Component {
   render() {
     return (
@@ -20,6 +21,7 @@ export default class App extends Component {
           })}
         </Switch>
         {this.props.children}
+        <NavBar />
       </div>
     );
   }

@@ -9,13 +9,19 @@ import {
   Add,
   Message,
   MyHome,
-  Circle
+  Circle,
+  Follow,
+  RecomMent
 } from "../pages";
 export const mainRouter = [
   {
     pathname: "/",
     component: TangPing,
     exact: true
+  },
+  {
+    pathname: "/recomment",
+    component: RecomMent
   },
   {
     pathname: "/login",
@@ -43,7 +49,6 @@ export const landingRouter = [
   {
     pathname: "/landing/artical",
     component: ArticalList,
-    exact: true
   },
   {
     pathname: "/landing/artical/:id",
@@ -62,7 +67,11 @@ export const landingRouter = [
     component: MyHome
   },
   {
-    pathname:"/landing/circle",
-    component:Circle
+    pathname: "/landing/circle",
+    component: Circle
+  },
+  {
+    pathname: "/landing/follow",
+    component: Follow
   }
 ];

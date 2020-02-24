@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { render } from "react-dom";
 import App from "./App";
 import {
@@ -6,25 +6,24 @@ import {
   Route,
   Switch,
   Redirect
+  // BrowserRouter
 } from "react-router-dom";
 
 import "./font-icon/iconfont.css";
 import "./index.less";
-import NavBar from "./components/NavBar/NavBar";
-import NavHead from "./components/NavHead/NavHead";
 
 import { mainRouter } from "./router";
 // import store from "./store";
 // import { Provider } from "react-redux";
+export default class index extends Component {}
 render(
   <Router>
     <div className="index-wrap">
-      <NavHead />
       <Switch>
         <Route
           path="/landing"
           render={routeProps => {
-            // 当进入/index时,才能触发App
+            // 当进入/landing时,才能走App组件
             return <App {...routeProps} />;
           }}
         />
@@ -35,17 +34,16 @@ render(
               path={route.pathname}
               exact={route.exact}
               render={routeProps => {
-                console.log(route)
                 return <route.component {...routeProps} />;
               }}
             />
           );
         })}
-        
-        <Redirect to="/landing" from="/" exact />
+
+        {/* 一般的Reirect 都放在 Switch里面,并且是在最后一行 */}
+        {/* <Redirect from="/" to="/langing/follow" exact/> */}
         <Redirect to="/login" />
       </Switch>
-      <NavBar />
     </div>
   </Router>,
   document.querySelector("#root")
