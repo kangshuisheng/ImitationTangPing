@@ -17,11 +17,17 @@ export const mainRouter = [
   {
     pathname: "/",
     component: TangPing,
-    exact: true
-  },
-  {
-    pathname: "/recomment",
-    component: RecomMent
+    exact: true,
+    children: [
+      {
+        pathname: "/recomment",
+        component: RecomMent
+      },
+      {
+        pathname: "/follow",
+        component: Follow
+      }
+    ]
   },
   {
     pathname: "/login",
@@ -48,7 +54,7 @@ export const landingRouter = [
   },
   {
     pathname: "/landing/artical",
-    component: ArticalList,
+    component: ArticalList
   },
   {
     pathname: "/landing/artical/:id",

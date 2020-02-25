@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./index.less";
 export default class index extends Component {
+  componentDidMount(){
+    console.log("Recomment加载好了");
+  }
   render() {
     console.log("RecomMent", this.props);
     return (
@@ -24,7 +27,66 @@ export default class index extends Component {
         </div>
         {/* 下面开始瀑布流布局 */}
         <div className="falls-wrap">
-          
+          <div className="fill-item">
+            <div className="img-part">
+              <img src="imgs/maonv.png" alt="" />
+              <span>每天学习,成为优秀的人吧</span>
+            </div>
+            <div className="author-part">
+              <div>
+                <img src="imgs/dm.jpg" alt="" />
+                <span>康水生</span>
+              </div>
+              <div>
+                <img src="logo192.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="fill-item">
+            <div className="img-part">
+              <img src="imgs/dm.jpg" alt="" />
+              <span>每天学习,成为优秀的人吧</span>
+            </div>
+            <div className="author-part">
+              <div>
+                <img src="imgs/dm.jpg" alt="" />
+                <span>康水生</span>
+              </div>
+              <div>
+                <img src="logo192.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="fill-item">
+            <div className="img-part">
+              <img src="imgs/dm.jpg" alt="" />
+              <span>每天学习,成为优秀的人吧</span>
+            </div>
+            <div className="author-part">
+              <div>
+                <img src="imgs/dm.jpg" alt="" />
+                <span>康水生</span>
+              </div>
+              <div>
+                <img src="logo192.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="fill-item">
+            <div className="img-part">
+              <img src="imgs/maonv.png" alt="" />
+              <span>每天学习,成为优秀的人吧</span>
+            </div>
+            <div className="author-part">
+              <div>
+                <img src="imgs/dm.jpg" alt="" />
+                <span>康水生</span>
+              </div>
+              <div>
+                <img src="logo192.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

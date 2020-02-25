@@ -29,14 +29,30 @@ render(
         />
         {mainRouter.map(route => {
           return (
-            <Route
-              key={route.pathname}
-              path={route.pathname}
-              exact={route.exact}
-              render={routeProps => {
-                return <route.component {...routeProps} />;
-              }}
-            />
+              <Route
+                key={route.pathname}
+                path={route.pathname}
+                exact={route.exact}
+                render={routeProps => {
+                  return (
+                    <route.component {...routeProps}>
+                      {route.children
+                        ? route.children.map((item, index) => {
+                            return (
+                              <Route
+                                key={index}
+                                path={item.pathname}
+                                render={routeProps => {
+                                  return <item.component {...routeProps} />;
+                                }}
+                              />
+                            );
+                          })
+                        : ""}
+                    </route.component>
+                  );
+                }}
+              />
           );
         })}
 
