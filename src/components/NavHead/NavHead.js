@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./index.less";
 export default class index extends Component {
   render() {
-    console.log("NavHead组件",this.props)
     return (
       <div className="nav-head-wrap">
         <div className="left-logo">

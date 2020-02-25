@@ -39,9 +39,6 @@ const RecomMentAuthor = params => {
 };
 
 export default class index extends Component {
-  componentDidMount() {
-    console.log("Fllow加载好了");
-  }
   state = {
     data: [
       {

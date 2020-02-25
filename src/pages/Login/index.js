@@ -4,7 +4,6 @@ import "./index.less"
 // import { Link } from "react-router-dom"
 export default class index extends Component {
   goHome = () => {
-    console.log(this.props);
     this.props.history.push('/')
   }
   render() {

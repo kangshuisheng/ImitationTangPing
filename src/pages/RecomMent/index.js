@@ -1,11 +1,76 @@
 import React, { Component } from "react";
 import "./index.less";
+// 瀑布流组件
+const FallsCom = () => {
+  return (
+    <div className="falls-wrap">
+      <div className="fill-item">
+        <div className="img-part">
+          <img src="imgs/maonv.png" alt="" />
+          <span>每天学习,成为优秀的人吧</span>
+        </div>
+        <div className="author-part">
+          <div>
+            <img src="imgs/dm.jpg" alt="" />
+            <span>康水生</span>
+          </div>
+          <div>
+            <img src="logo192.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="fill-item">
+        <div className="img-part">
+          <img src="imgs/dm.jpg" alt="" />
+          <span>每天学习,成为优秀的人吧</span>
+        </div>
+        <div className="author-part">
+          <div>
+            <img src="imgs/dm.jpg" alt="" />
+            <span>康水生</span>
+          </div>
+          <div>
+            <img src="logo192.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="fill-item">
+        <div className="img-part">
+          <img src="imgs/dm.jpg" alt="" />
+          <span>每天学习,成为优秀的人吧</span>
+        </div>
+        <div className="author-part">
+          <div>
+            <img src="imgs/dm.jpg" alt="" />
+            <span>康水生</span>
+          </div>
+          <div>
+            <img src="logo192.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="fill-item">
+        <div className="img-part">
+          <img src="imgs/maonv.png" alt="" />
+          <span>每天学习,成为优秀的人吧</span>
+        </div>
+        <div className="author-part">
+          <div>
+            <img src="imgs/dm.jpg" alt="" />
+            <span>康水生</span>
+          </div>
+          <div>
+            <img src="logo192.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default class index extends Component {
-  componentDidMount(){
-    console.log("Recomment加载好了");
-  }
+  componentDidMount() {}
   render() {
-    console.log("RecomMent", this.props);
+    console.log("RecomMent___", this.props);
     return (
       <div className="recom-ment-wrap">
         <div className="pictorial-wrap">
@@ -16,8 +81,8 @@ export default class index extends Component {
             />
             <div className="small-tag">
               <div className="left">
-                <span className="day">24</span>
-                <span className="month">02</span>
+                <span className="day">{new Date().getDate()}</span>
+                <span className="month">{new Date().getMonth() + 1}</span>
               </div>
               <div className="right">图报</div>
             </div>
@@ -26,69 +91,11 @@ export default class index extends Component {
           <div className="box2"></div>
         </div>
         {/* 下面开始瀑布流布局 */}
-        <div className="falls-wrap">
-          <div className="fill-item">
-            <div className="img-part">
-              <img src="imgs/maonv.png" alt="" />
-              <span>每天学习,成为优秀的人吧</span>
-            </div>
-            <div className="author-part">
-              <div>
-                <img src="imgs/dm.jpg" alt="" />
-                <span>康水生</span>
-              </div>
-              <div>
-                <img src="logo192.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="fill-item">
-            <div className="img-part">
-              <img src="imgs/dm.jpg" alt="" />
-              <span>每天学习,成为优秀的人吧</span>
-            </div>
-            <div className="author-part">
-              <div>
-                <img src="imgs/dm.jpg" alt="" />
-                <span>康水生</span>
-              </div>
-              <div>
-                <img src="logo192.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="fill-item">
-            <div className="img-part">
-              <img src="imgs/dm.jpg" alt="" />
-              <span>每天学习,成为优秀的人吧</span>
-            </div>
-            <div className="author-part">
-              <div>
-                <img src="imgs/dm.jpg" alt="" />
-                <span>康水生</span>
-              </div>
-              <div>
-                <img src="logo192.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="fill-item">
-            <div className="img-part">
-              <img src="imgs/maonv.png" alt="" />
-              <span>每天学习,成为优秀的人吧</span>
-            </div>
-            <div className="author-part">
-              <div>
-                <img src="imgs/dm.jpg" alt="" />
-                <span>康水生</span>
-              </div>
-              <div>
-                <img src="logo192.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <FallsCom />
       </div>
     );
   }
+  sendMessage = () => {
+    this.props.setChildData("子修改父");
+  };
 }

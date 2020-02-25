@@ -13,8 +13,21 @@ import { StickyContainer, Sticky } from "react-sticky";
 const tabs = [{ title: "推荐" }, { title: "订阅" }];
 
 export default class TangPing extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 1
+    };
+  } 
+  changeActive = params => { //TODO: 把父元素的方法传递给子元素,子元素触发这个方法来 完成数据的 修改,
+    console.log("params",this.state.active);
+    this.setState({
+      active: params
+    });
+  };
+
   render() {
-    console.log("TANGPING", this.props);
 
     const { children } = this.props; //把子路由从中解构出来
 
@@ -43,20 +56,28 @@ export default class TangPing extends Component {
             tabs={tabs}
             renderTabBar={renderTabBar}
             onChange={(tabs, index) => {
-              index === 1 && !flag ? this.props.history.push("/login") : console.log(index)
+              index === 1 && !flag
+                ? this.props.history.push("/login")
+                : console.log(index);
             }}
           >
-            {children.map((list, index) => { //渲染结构出来的子路由
-              console.log("???",list.props.path);
+            {children.map((list, index) => {
+              //渲染结构出来的子路由
               return (
                 <Route
                   path={list.path}
                   key={index}
                   render={routeProps => {
-                    return <list.props.render {...routeProps} />;
+                    return (
+                      <list.props.render
+                        setChildData={this.changeActive}
+                        {...routeProps}
+                      />
+                    );
                   }}
                 />
               );
+              
             })}
           </Tabs>
         </StickyContainer>
