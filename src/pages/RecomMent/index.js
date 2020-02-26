@@ -68,9 +68,9 @@ const FallsCom = () => {
   );
 };
 export default class index extends Component {
-  componentDidMount() {}
   render() {
     console.log("RecomMent___", this.props);
+    console.log("THIS",this);
     return (
       <div className="recom-ment-wrap">
         <div className="pictorial-wrap">

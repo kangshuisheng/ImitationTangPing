@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import NavHead from "../../components/NavHead/NavHead";
 import NavBar from "../../components/NavBar/NavBar";
-import Follow from "../Follow";
-import RecomMent from "../RecomMent";
 import "./index.less";
 import { Route } from "react-router-dom";
 
