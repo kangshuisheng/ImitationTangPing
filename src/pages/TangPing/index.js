@@ -19,7 +19,7 @@ export default class TangPing extends Component {
   } 
   changeActive = params => { //TODO: 把父元素的方法传递给子元素,子元素触发这个方法来 完成数据的 修改,
     console.log("params",this.state.active);
-    console.log("");
+    console.log("再来一次");
     this.setState({
       active: params
     });
