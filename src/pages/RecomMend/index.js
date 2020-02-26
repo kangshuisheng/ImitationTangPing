@@ -69,7 +69,7 @@ const FallsCom = () => {
 };
 export default class index extends Component {
   render() {
-    console.log("RecomMent___", this.props);
+    console.log("RecomMend___", this.props);
     console.log("THIS",this);
     return (
       <div className="recom-ment-wrap">
@@ -84,7 +84,7 @@ export default class index extends Component {
                 <span className="day">{new Date().getDate()}</span>
                 <span className="month">{new Date().getMonth() + 1}</span>
               </div>
-              <div className="right">图报</div>
+              <div className="right">画报</div>
             </div>
           </div>
           <div className="box1"></div>

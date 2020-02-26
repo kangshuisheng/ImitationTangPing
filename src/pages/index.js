@@ -51,8 +51,8 @@ const Circle = Loadable({
   loader: () => import("./Circle"),
   loading: Loading
 });
-const RecomMent = Loadable({
-  loader: () => import("./RecomMent"),
+const RecomMend = Loadable({
+  loader: () => import("./RecomMend"),
   loading: Loading
 });
 const Follow = Loadable({
@@ -73,5 +73,5 @@ export {
   Add,
   Circle,
   Follow,
-  RecomMent
+  RecomMend
 };

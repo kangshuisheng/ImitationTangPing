@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./index.less";
 
-const RecomMentAuthor = params => {
+const RecomMendAuthor = params => {
   console.log(params);
   return (
-    <div className="recomment-author-wrap">
+    <div className="recommend-author-wrap">
       <p>为你推荐</p>
       {params.data.map((item, index) => {
         return (
-          <div className="recomment-author-item" key={index}>
+          <div className="recommend-author-item" key={index}>
             <div className="top">
               <img className="icon" src={item.icon} alt="" />
               <div className="album">
@@ -90,8 +90,9 @@ export default class index extends Component {
   render() {
     return (
       <div className="follow-wrap">
-        <img className="place-holder-img" src="imgs/maonv.png" alt="" />
-        <RecomMentAuthor data={this.state.data} />
+        <img className="place-holder-img" src="" alt="" />
+        <div>没有关注呢</div>
+        <RecomMendAuthor data={this.state.data} />
       </div>
     );
   }

@@ -8,14 +8,15 @@ import {
   Redirect
   // BrowserRouter
 } from "react-router-dom";
+import { data } from "./list-total.json";
 
 import "./font-icon/iconfont.css";
 import "./index.less";
-
 import { mainRouter } from "./router";
 // import store from "./store";
 // import { Provider } from "react-redux";
 export default class index extends Component {}
+console.log(data);
 render(
   <Router>
     <div className="index-wrap">
@@ -29,30 +30,30 @@ render(
         />
         {mainRouter.map(route => {
           return (
-              <Route
-                key={route.pathname}
-                path={route.pathname}
-                exact={route.exact}
-                render={routeProps => {
-                  return (
-                    <route.component {...routeProps}>
-                      {route.children
-                        ? route.children.map((item, index) => {
-                            return (
-                              <Route
-                                key={index}
-                                path={item.pathname}
-                                render={routeProps => {
-                                  return <item.component {...routeProps} />;
-                                }}
-                              />
-                            );
-                          })
-                        : ""}
-                    </route.component>
-                  );
-                }}
-              />
+            <Route
+              key={route.pathname}
+              path={route.pathname}
+              exact={route.exact}
+              render={routeProps => {
+                return (
+                  <route.component {...routeProps}>
+                    {route.children
+                      ? route.children.map((item, index) => {
+                          return (
+                            <Route
+                              key={index}
+                              path={item.pathname}
+                              render={routeProps => {
+                                return <item.component {...routeProps} />;
+                              }}
+                            />
+                          );
+                        })
+                      : ""}
+                  </route.component>
+                );
+              }}
+            />
           );
         })}
 

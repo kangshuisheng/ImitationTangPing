@@ -11,7 +11,7 @@ import {
   MyHome,
   Circle,
   Follow,
-  RecomMent
+  RecomMend
 } from "../pages";
 export const mainRouter = [
   {
@@ -20,8 +20,8 @@ export const mainRouter = [
     exact: true,
     children: [
       {
-        pathname: "/recomment",
-        component: RecomMent
+        pathname: "/recommend",
+        component: RecomMend
       },
       {
         pathname: "/follow",
